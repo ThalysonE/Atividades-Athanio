@@ -8,15 +8,11 @@
 
         function Connect(){
             try{
-                $this->conn = new PDO("mysql:host=".$host.";dbname=". $this->dbname, $this->user, $this->pass);
+                $this->conn = new PDO("mysql:host=".$this->host .";dbname=". $this->dbname, $this->user, $this->pass);
             }catch(PDOException $e){
                 echo "Erro de conexão " . $e;
             }
             return $this->conn;
         }
     }
-
-
-
-
 ?>
